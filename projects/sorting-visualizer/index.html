@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="JavaScript Projects | Vanilla JavaScript Based Projects">
+    <meta name="keywords" content="JavaScript Projects, Word Counter, Songify, Music Player, HTML, CSS, JavaScript, Music, Project">
+    <meta name="author" content="Aslam Khan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting-Visualizer</title>
+    <link rel="shortcut icon" href="./assets/site-img/favicon.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body oncontextmenu="return false">
+
+<!-- header section starts -->
+<header class="h1">
+    <a href="#" class="logo"> <i class="fab fa"></i> Sorting Visualizer </a>
+    <div id="menu" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="#home">home</a></li>
+            <li><a href="#project">projects</a></li>
+            <li><a href="#basic">basic</a></li>
+            
+        </ul>
+    </nav>
+    
+</header>
+<!-- header section ends -->
+
+
+<!-- Navigation Bar -->
+<div class="na">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <!--<a class="navbar-brand appName" href="#">Sorting Visualizer</a>*/-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div>
+                <li class="nav-i">
+                    <label for="arrayRange" class="form-label ">Array Size</label>
+                    <input type="range" min="10" max="20" value="30" id="arrayRange"
+                        onchange="arraySizeChange(this.value)">
+                </li>
+                <li class="nav-i">
+                    <label  for="speedRange" class="form-label ">Speed</label>
+                    <input type="range" min="50" max="1000" value="500" id="speedRange"
+                        onchange="speedChange(this.value)">
+                </li>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <ul class="navbar-nav navItemsList">
+                    <li class="nav-item">
+                        <a class="nav-link newArray toChange text-white" aria-current="page" href="#">Generate New Array</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link newArray toChange text-white" aria-current="page" href="#" id="reset">RESET</a>
+                    </li>
+
+
+                    <li class="nav-item dropdown text-white">
+                        <a class="nav-link dropdown-toggle active disabled text-white font-weight-bold" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">Bubble Sort</a>
+                        <ul class="dropdown-menu navDropdown" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Insertion Sort</a></li>
+                            <li><a class="dropdown-item" href="#">Selection Sort</a></li>
+                            <li><a class="dropdown-item" href="#">Heap Sort</a></li>
+                            <li><a class="dropdown-item" href="#">Quick Sort</a></li>
+                            <li><a class="dropdown-item" href="#">Merge Sort</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<section class="bars">
+<!-- Bars -->
+<div class="barsCon">
+
+
+</div>
+
+<!-- Sorting Button -->
+<div>
+    <button class="offset-8 my-5 btn btn-outline-light rounded-pill btn-lg" id="sortBtn">Sort</button>
+
+</div>
+
+</section>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<!-- footer strated -->
+<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved | Algorithm Visualizer<span><i class=""></i><a href='' target="_blank">&nbsp;</a>
+          </span></p>
+          
+        </div>
+        <!--<div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="linkedin" href="https://www.linkedin.com/in/aslamasgarkhan/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a class="twitter" href="https://twitter.com/aslamasgarkhan" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a class="github" href="https://github.com/iamaslamkhan" target="_blank"><i class="fab fa-github"></i></a></li> 
+            <li><a class="youtube" href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            <li><a class="instagram" href="https://instagram.com/aslamkhan_17" target="_blank"><i class="fab fa-instagram"></i></a></li> 
+          </ul>
+        </div>-->
+      </div>
+    </div>
+</footer>
+<!-- footer ended -->
+
+<!-- scroll top btn -->
+<a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- custom js -->
+<!-- <script src="./assets/js/projects.js"></script> -->
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>

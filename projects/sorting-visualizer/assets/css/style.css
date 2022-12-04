@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --violet: #5320e0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+*::selection {
+  background: var(--violet);
+  color: #003bed;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 0.7rem;
+}
+html::-webkit-scrollbar-track {
+  background: rgb(175, 175, 175);
+}
+html::-webkit-scrollbar-thumb {
+  background: #ff7300;
+}
+
+body {
+  background: #003bed;
+}
+
+section {
+  min-height: 100vh;
+  padding: 0 7%;
+}
+.heading {
+  font-size: 3.5rem;
+  color: rgb(255, 0, 0);
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+}
+.heading span {
+  color: rgb(115, 3, 167);
+}
+
+header {
+  width: 100%;
+  /*background: rgb(62, 4, 155);*/
+  background-color: #003bed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.8rem 7%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+header .logo {
+  font-size: 2.5rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: 0.2s;
+}
+header .logo i {
+  color: #ffd900;
+}
+header .logo:hover {
+  color: #ffd900;
+  transform: scale(1.1);
+}
+header .navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+header .navbar ul li {
+  margin-left: 2.5rem;
+}
+header .navbar ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+  color: #ffd900;
+  border-bottom: 0.2rem solid #ffd900;
+  padding: 0.7rem 0;
+}
+#menu {
+  font-size: 3rem;
+  color: #ffd900;
+  cursor: pointer;
+  display: none;
+}
+header a.conbtn {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 6px 10px;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  border-radius: 4px;
+  font-weight: 700;
+  color: rgb(62, 4, 155);
+  text-decoration: none;
+  margin-top: 0.3rem;
+}
+header a.conbtn:hover {
+  color: rgb(62, 4, 155);
+  background: rgb(255, 230, 0);
+}
+
+
+/* text anim */
+#container {
+  text-align: left;
+  position: relative;
+}
+#text {
+  display: inline-block;
+  vertical-align: middle;
+  color: orange;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 2rem;
+}
+
+#cursor {
+  display: inline-block;
+  vertical-align: center;
+  width: 3px;
+  height: 3rem;
+  background-color: orange;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: orange;
+  }
+}
+/* hero end */
+
+
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 768px) {
+  #menu {
+    display: block;
+  }
+  header .navbar {
+    position: fixed;
+    top: 5.3rem;
+    right: -120%;
+    width: 70%;
+    height: 100%;
+    text-align: left;
+    align-items: flex-start;
+    background-color: rgb(32, 32, 32);
+  }
+  header .navbar ul {
+    flex-flow: column;
+    padding: 2rem;
+  }
+  header .navbar ul li {
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+    border-bottom: 3px solid #ffd900;
+    border-radius: 0.5rem;
+    width: 22rem;
+  }
+  header .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    text-align: left;
+  }
+  header .navbar ul li a.active,
+  header .navbar ul li a:hover {
+    padding: 1rem;
+    background: var(--violet);
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+  .fa-times {
+    transform: rotate(180deg);
+  }
+  header .navbar.nav-toggle {
+    right: 0;
+  }
+  header a.conbtn {
+    margin-top: 1rem;
+    width: 100%;
+    margin-left: -1rem;
+    text-align: center;
+  }
+  .home .content {
+    text-align: center;
+  }
+  .home .image img {
+    position: absolute;
+    top: 60%;
+  }
+  .project .heading {
+    padding: 0.5rem;
+  }
+  .project .box-container .box {
+    width: 42rem;
+    height: 46rem;
+    margin: 1rem;
+  }
+  .project .box-container .box .content p {
+    font-size: 1.7rem;
+  }
+  #container {
+    text-align: center;
+  }
+  .basic .box-container .box {
+    min-width: 40rem;
+  }
+  .basic .box-container .box .content {
+    flex: 1 1 30rem;
+  }
+  .basic .box-container .box img {
+    width: 25%;
+    height: 18rem;
+    flex: 1 1 20rem;
+  }
+  .basic .box-container .box .content h3 {
+    font-size: 1.8rem;
+    padding: 0.2rem 0;
+    margin-left: 0.2rem;
+  }
+  .basic .box-container .box .content p {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+  }
+  .basic .btns {
+    padding: 0.5rem;
+  }
+  .basic .btns .btn {
+    padding: 0.8rem;
+  }
+  .apibased {
+    margin: 0;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 52%;
+  }
+  section {
+    padding: 0 3%;
+    padding-top: 2rem;
+  }
+}
+
+
+
+
+
+
+/* Navigation Bar */
+.container-fluid {
+
+    margin-top: 6rem;
+   /* padding: 1% 2% 0 2%;*/
+    text-align: left;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    margin-right: 1rem;
+    background-color:#003bed
+  }
+  
+  .appName {
+    font-size: 200rem;
+    font-weight: bolder;
+  }
+  .navItemsList {
+    margin-left: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .newArray {
+    margin-right: 1rem;
+  }
+  
+  .navDropdown {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #fff;
+  }
+  
+  /* Bars */
+  .barsCon {
+    margin-left: 5%;
+    /*margin-top: 5%;*/
+    margin-right: 5%;
+    height: 70vh;
+  }
+  .bar {
+    width: var(--width);
+    background-color: rgb(255, 255, 255);
+    margin-right: 2px;
+    margin-left: 5px;
+    display: inline-block;
+    border-radius: 50px;
+    box-shadow: 3px 5px #888888;
+    transition: ease-out 0.3s;
+  }
+  
+  /* Sort Btn */
+  .btn-lg {
+    font-size: 1.75rem;
+    border-radius: 50px;
+    box-shadow: 5px 3px #735c5c;
+    font-weight: bold;
+    width: 225px;
+    margin-top: 10rem;
+  }
+  
+  /* .bar:hover {
+    transition: 0.3s ease-out;
+    box-shadow: 10px 10px 10px 10px purple;
+    width: 3%;
+    margin: 0px 5px 0px 7px;
+  } */
+  
+
+
+
+.bars {margin-top: 0rem;
+  background-color: blue;
+  
+}
+
+
+/* Footer  */
+.site-footer {
+    margin-top: 0rem;
+  background-color: #08142c;
+  padding: 30px 0 10px;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgb(209, 203, 203);
+}
+.site-footer .social-icons {
+  text-align: right;
+}
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #fdfdfd;
+}
+.copyright-text {
+  margin-top: 10px;
+  font-family: "Nunito", sans-serif;
+}
+@media (max-width: 991px) {
+  .site-footer [class^="col-"] {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center;
+  }
+}
+
+
+/* Footer  */
+
+/* footer made with love */
+.site-footer span {
+  color: rgb(177, 174, 174);
+  font-size: 1.3rem;
+  display: block;
+  position: absolute;
+  left: 80%;
+  top: 35%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+.site-footer span a {
+  text-decoration: none;
+}
+.site-footer .fa {
+  color: #e90606;
+  margin: 0 0.3rem;
+  font-size: 1.1rem;
+  animation: pound 0.35s infinite alternate;
+}
+@-webkit-keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+/* footer made with love */
+
+/* scroll top starts */
+#scroll-top {
+  position: fixed;
+  top: -140%;
+  right: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  background: #ffae00;
+  color: rgb(13, 0, 44);
+  border-radius: 50%;
+  transition: 0.5s ease-in;
+  z-index: 1000;
+  text-decoration: none;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
+}
+#scroll-top.active {
+  top: calc(100% - 12rem);
+}
+/* scroll top ends */
+
+
+.nav i{
+  font-size: 1.5rem;
+}
