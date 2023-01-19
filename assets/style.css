@@ -18,7 +18,10 @@ html {
 }
 body {
   background: #f7f7f7;
-  font-family: "Poppins", sans-serif;
+  /*font-family: "Poppins", sans-serif;*/
+  font-family: "Nunito", sans-serif;
+  font-size: large;
+  font-weight: 100;
 }
 
 *::selection {
@@ -96,6 +99,7 @@ header .logo {
 }
 header .logo i {
   font-size: 2.2rem;
+  font-family: "Poppins", sans-serif;
 }
 header .logo:hover {
   color: #011aff;
@@ -348,13 +352,6 @@ header .navbar ul li a:hover {
   
 }
 
-
-
-
-
-
-
-
 /* contact section media queries starts */
 @media (max-width: 900px) {
   .contact {
@@ -380,9 +377,10 @@ header .navbar ul li a:hover {
   /* background: #010124; */
   /*background: linear-gradient(to bottom, #010136, #00003a);*/
   background-color: #fff;
-  margin-top: 5rem;
+  /*margin-top: 5rem;*/
 }
 .visualizer h2{
+  margin-top: 5rem;
   color: #5467ff;
   padding: 1rem;
   font-family: "Nunito", sans-serif;
@@ -543,9 +541,6 @@ header .navbar ul li a:hover {
   transform: translateX(-8px);
 }
 /* work section ends */
-
-
-
 /* How it works ends */
 /* contact section media queries ends */
 /* contact section ends */
@@ -686,11 +681,6 @@ header .navbar ul li a:hover {
   top: calc(100% - 14rem);
 }
 /* scroll top ends */
-
-
-
-
-
 /* footer section starts */
 .footer {
   min-height: auto;
@@ -773,5 +763,11 @@ header .navbar ul li a:hover {
   font-size: 1.5rem;
   animation: pound 0.35s infinite alternate;
 }
+.team .heading{
+  margin-top: 5rem;
+  color: #5467ff;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
 
-
+}
