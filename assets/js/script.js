@@ -8,8 +8,14 @@ $(document).ready(function () {
     $(window).on('scroll load', function () {
         $('#menu').removeClass('fa-times');
         $('.navbar').removeClass('nav-toggle');
-
+/*
         if (window.scrollY > 60) {
+            document.querySelector('#scroll-top').classList.add('active');
+        } else {
+            document.querySelector('#scroll-top').classList.remove('active');
+        }*/
+
+        if (window.scrollY > 2000) {
             document.querySelector('#scroll-top').classList.add('active');
         } else {
             document.querySelector('#scroll-top').classList.remove('active');
@@ -60,12 +66,12 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "AlgoVisual";
+            document.title = "Algorithm Visualizer";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
             document.title = "Come Back To Algorithm Visualizer";
-            $("#favicon").attr("href", "assets/images/favhand.png");
+            $("#favicon").attr("href", "assets/images/favicon.png");
         }
     });
 
