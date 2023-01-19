@@ -8,7 +8,9 @@ pre {
 }
 
 
-body {font-family: "Courier New", sans-serif; font-size: 100%; color: black}
+body {
+    margin-top: 10rem;
+    font-family: "Courier New", sans-serif; font-size: 100%; color: black}
 .keyword {color: #000fd6 !important; font-weight: bold;}
 .comment {color: #005500 !important; }
 /*      .comment {color: darkred !important; background: #d1e0f0;}*/
