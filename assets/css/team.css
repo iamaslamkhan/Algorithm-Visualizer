@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+.team .heading{
+    margin-top: 5rem;
+    color: #5467ff;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .team {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+  }
+  
+  .team-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3%;
+    width: 100%;
+  }
+  
+  .team-picture {
+    height: 85%;
+    margin-top: 2%;
+    width: 45%;
+  }
+  
+  .team-profile {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%;
+  }
+  
+  .team-title {
+    color: #595da5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .team-description {
+   /* margin-top: 2.5rem;*/
+    color: #8789b5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 15px;
+    margin-top: 5rem;
+  }
+
+  .profile-container {
+    background: #fff;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 20px;
+    width: 500px;
+  }
+  
+  .profile-description-container {
+    flex-direction: column;
+   
+    line-height: 0;
+    padding-left: 20px;
+    padding-top: 9px;
+  }
+  
+  .picture {
+    border-color: #d7dbff;
+    border-radius: 5px;/*
+    border-style: solid;
+    border-width: 0.1px;*/
+    height: 70px;
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* This helps to make the image clearer even though it is being underlined */
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+    width: 70px;
+  }
+  
+  .profile-title {
+    color: #595da5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-description {
+    color: #8789b5;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 18px;
+  }
+  
+  .github-logo {
+    margin-left: 10px;
+  }
+  
+  .share {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem ;
+  }
+  .share a {
+    height: 4rem;
+    width: 4rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5rem;
+    font-size: 1.7rem;
+    margin-right: 1rem;
+    transition: 0.2s;
+    background: #011aff;
+    color: white;
+    border: none;
+  }
+  .share a:hover {
+    background:#fff;
+    transform: scale(0.98);
+    border: 0.1rem solid rgb(180, 178, 178);
+    color: #011aff;
+  }

@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+/* scroll top starts */
+
+#scroll-top {
+    position: fixed;
+    top: -75%;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    transition: 1s linear;
+    z-index: 1000;
+}
+
+#scroll-top.active {
+    top: calc(100% - 14rem);
+}
+
+.pa-fixed-header {
+	background-color: #fff !important;
+	-webkit-transition: background-color 1s ease-out;
+	-moz-transition: background-color 1s ease-out;
+	-o-transition: background-color 1s ease-out;
+	transition: background-color 1s ease-out;
+}
+
+.text-black{
+    color: #5467ff !important;
+}
+
+  /* scroll top ends */
