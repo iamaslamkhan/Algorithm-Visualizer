@@ -43,7 +43,7 @@ sortspeed.addEventListener("input", function () {
     time = 105 - parseInt(sortspeed.value);
 });
 
-function generateBars(barno = 15) {
+function generateBars(barno = 50) {
     document.getElementById("bar").innerHTML = "";
     let bars = [];
     for (let i = 0; i < barno; i++) {
