@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Algorithm visualizer using D3js. It will help you to understand the algorithm. I've used swapping animation for clear understanding of the algorithm."
+    />
+    <title>Algorithm Visualizer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
+      integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="/projects/Tower of Hanoi/assets/css/header.css">
+
+  </head>
+  <body>
+    <header>
+      
+
+      <a href="/" class="logo"><i class="fab fa-AS"></i> Searching Visualizer</a>
+      <div id="menu" class="fas fa-bars"></div>
+      <nav class="navbar">
+        <ul>
+          <li><a class="active" href="/index.html#home">Home</a></li>
+          <li><a href="/index.html#about">How it Works</a></li>
+          <li><a href="/index.html#visualizer">Visualizer</a></li>
+          <li><a href="/index.html#team">Team</a></li>
+          <li><a href="/index.html#footer">Contact Us</a></li>
+        </ul>
+      </nav>
+
+
+    </header>
+    <!--<p class="sound"><a id="sound" href="#">Sound 🎵</a></p>-->
+    <!--<div class="container">
+      <h2>Searching Algorithm Visualizer</h2>
+    </div>-->
+
+    <br />
+    <div class="container">
+      <div class="form-inline">
+        <div class="form-group">
+          <select class="form-control" id="get-algo">
+            <option value="binary-search">Binary Search</option>
+            <option value="linear-search">Linear Search</option>
+          </select>
+        </div>
+        <div class="form-group mx-sm-3">
+          <label for="inputPassword2" class="sr-only">Password</label>
+          <input
+            type="text"
+            class="form-control"
+            id="targetValue"
+            placeholder="Enter an element"
+          />
+        </div>
+        <button class="btn btn-primary" id="search">Search</button>
+      </div>
+
+      <br />
+
+      <div class="row">
+        <div class="col-md-3">
+          <button class="btn btn-info" id="random-data">
+            Generate Random Data
+          </button>
+        </div>
+        <div class="col-md-3">
+          <label>
+            Speed:
+            <input
+              type="range"
+              id="speed"
+              name="speed"
+              min="100"
+              max="800"
+              value="300"
+              onchange="setSpeed()"
+            />
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="bar-chart">
+        <div id="chart"></div>
+        <hr />
+      </div>
+    </div>
+    <div id="foundNotice" class="container text-success text-center"></div>
+
+    <footer>
+      <div class="footer-text">
+
+      </div>
+    </footer>
+    <script src="./assets/script.js"></script>
+    <script src="./assets/base.js"></script>
+    <script src="./assets/function.js"></script>
+  </body>
+</html>
